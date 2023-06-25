@@ -8,5 +8,5 @@ class Assertions:
             response_as_dict = response.json()
         except json.JSONDecodeError:
             assert False, f"Response is not in JSON fromat. Response text is '{response.text}'"
-        assert name in response_as_dict, f"Response JSON doesn't h  ave key '{name}'"
+        assert name in response_as_dict, f"Response JSON doesn't have key '{name}'"
         assert response_as_dict[name] == expected_value, error_message
